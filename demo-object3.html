@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // định nghĩa lớp 
+        class Student {
+            constructor(msv, fullName, age) {
+                this.msv = msv,
+                    this.fullName = fullName,
+                    this.age = age
+            }
+            showInfo() {
+                document.write(`<h1>Mã sv : ${this.msv}</h1>`)
+                document.write(`<h1>Họ và tên sv : ${this.fullName}</h1>`)
+                document.write(`<h1>Tuổi sv : ${this.age}</h1>`)
+            }
+        }
+
+        // khởi tạo đối tượng từ lơp Student 
+
+        var st1 = new Student("B01", "Nguyễn Văn A", 10);
+        st1.showInfo()
+        console.log(st1);
+        var st2 = new Student("B02", "Nguyễn Văn B", 19);
+        st2.showInfo();
+        console.log(st2.fullName);
+
+    </script>
+</body>
+
+</html>

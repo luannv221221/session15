@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function Student(msv, fullName, age, address) {
+            return {
+                msv: msv,
+                fullName: fullName,
+                age: age,
+                address: address,
+                getFullName: function () {
+                    return this.fullName;
+                },
+                showInfo: function () {
+                    document.write()
+                }
+            }
+        }
+        // khởi tạo đối tượng 
+        var student1 = new Student("01", "Ngọc anh", 18, "Thái Bình");
+        console.log(student1.getFullName());
+        var student2 = new Student("02", "Nguyễn Ngọc", 21, "Hà Tĩnh");
+        console.log(student2.fullName);
+
+
+
+    </script>
+</body>
+
+</html>

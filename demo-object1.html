@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // khai báo đối tượng Student 
+
+        var student = {
+            msv: "S01",
+            fullName: "Nguyen Van A",
+            age: 18,
+            study: function (course) {
+                console.log(this.fullName + " Đang học môn " + course);
+            },
+            showInfo: function () {
+                document.write(`<h1>Mã sinh viên : ${this.msv}</h1>`)
+                document.write(`<h1>Họ và tên : ${this.fullName}</h1>`)
+            }
+        }
+        // truy cập vào thuộc tính fullName của đối tượng student 
+        console.log("Họ và tên : " + student.fullName);
+        // truy cập vào phương thức study của đối tượng student 
+        student.study("HTML");
+        // truy cập vào phương thức showInfo 
+        student.showInfo();
+
+        console.log(student);
+
+        // Khai báo đối tượng sinh viên bao gồm thuộc tính studentCode,fullName,age,sex,address,
+        // phương thức : showInfo()=> hiển thị thông tin sinh viên ra màn hình (Mã sinh Vien: ?, Tên SV : ?)
+
+        var student2 = {
+            studentCode: "B2001", fullName: "Nguyeenxx Ngọc Mai", age: 18,
+            address: "Bắc Ninh",
+            showInfo: function () {
+                document.write(new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear());
+                document.write("<h1>Thông tin cua student2</h1>")
+                document.write(`<h2>Mã sinh viên : ${this.studentCode}</h2>`)
+                document.write(`<h2>Tên sinh viên : ${this.fullName}</h2>`)
+                document.write(`<h2>Năm sinh : ${new Date().getFullYear() - this.age}</h2>`)
+                document.write(`<h2>Địa chỉ : ${this.address}</h2>`)
+
+            }
+        }
+        student2.showInfo();
+
+    </script>
+</body>
+
+</html>

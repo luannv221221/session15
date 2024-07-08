@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*Viết chương trình khai báo chuỗi bất kỳ, xây dựng hàm có tham số là 1 chuỗi
+         và kết quả trả về là chuỗi được truyền vào nhưng viết hoa tất cả các chữ cái đầu
+        . Gọi hàm với chuỗi đã được khai báo và in kết quả ra màn hình.
+        */
+        // TH1 truyền vào một chuỗi nguyen => Nguyen
+
+        /* var chuoi = "nguyen";
+        chuoi = "anh nguyen pham";
+        function vietHoaChuCaiDau(str) {
+            // cắt 1 phần tử đầu của chuỗi
+            // console.log(str.slice(1));
+            // console.log(str[0].toUpperCase() + "guyen");
+            return str[0].toUpperCase() + str.slice(1);
+        }
+
+        var chuoiHoaChuDau = vietHoaChuCaiDau(chuoi);
+        console.log(chuoiHoaChuDau);
+        */
+        // TH2 truyen vào 1 chuoi nguyen anh pham => Nguyen Anh Pham NguyenVanA
+        // cách 1: 
+        var chuoi = "nguyen van a";
+        function vietHoaChuCaiDau(str) {
+            var strArray = str.split(" ");
+            var chuoiMoi = "";
+            for (var i = 0; i < strArray.length; i++) {
+                chuoiMoi += strArray[i][0].toUpperCase() + strArray[i].slice(1) + " ";
+            }
+            return chuoiMoi.slice(0, 15);
+        }
+        // cách 2: 
+        // function vietHoaChuCaiDau(str) {
+        //     var strArray = str.split(" ");
+
+        //     for (var i = 0; i < strArray.length; i++) {
+        //         strArray[i] = strArray[i][0].toUpperCase() + strArray[i].slice(1);
+        //     }
+        //     return chuoiMoi.join(" ");
+        // }
+
+        var chuoi2 = "nguyen van vinh";
+        console.log(chuoi2.length);
+        console.log(vietHoaChuCaiDau(chuoi2));
+        console.log(vietHoaChuCaiDau(chuoi2).length);
+    </script>
+</body>
+
+</html>

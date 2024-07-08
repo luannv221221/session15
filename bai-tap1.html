@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // khai bảo mảng đối tượng category 
+        // Hiển thị danh sách danh mục dưới dạng ul >li 
+
+        var category1 = { name: "Áo sơ mi", link: "mosoftvn.com" };
+        var category2 = { name: "Quần Kaki", link: "shope" };
+        var categories = [category1, category2];
+
+        // định nghĩa hàm hiển thị danh sách dưới dang ul > Li
+        function render() {
+            var html = '';
+            for (var i = 0; i < categories.length; i++) {
+                html = html + `<li><a href="${categories[i].link}">${categories[i].name}</a></li>`
+            }
+            console.log(html);
+            document.write(`<ul>
+                ${html}
+            </ul>`)
+        }
+        // gọi hàm render 
+        render();
+    </script>
+</body>
+
+</html>
